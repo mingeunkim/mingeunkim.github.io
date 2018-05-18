@@ -1,0 +1,75 @@
+---
+layout: post
+title: 'Docker & Laravel (Laradock) 사용해보다..'
+description: '도커를 이용해 하이스쿨 스토어를 서비스 해보기 시작편'
+date: 2018-05-19
+author: 김민근
+tags: [Docker, Laravel, Laradock, nginx, mariadb]
+---
+
+> 도커를 이용한 서버 관리
+
+<img src="https://ih1.redbubble.net/image.386900865.0087/flat,800x800,075,f.jpg" width="500">
+
+### 도커 입문 계기
+기존 하이스쿨 스토어는 apache2 + php7.1 + mysql 편하게 말하면 apm 기술을 사용하고 있었다. 하지만 라라벨 이용자들의 말을 들어보면 아파치 보다는 엔진엑스가 성능이 더 좋고
+라라벨을 받쳐준다는 말을 듣고 서버를 갈아 엎기 시작했다. nginx ... php7.2 ... mariadb ... 이 세가지를 설치하고 나면 어느 하나가 오류가 나기 시작했다.
+
+
+서버를 효율적으로 관리하기위해 구글링을 열심히 해보는중 ```Docker``` 라는 단어가 눈에 띄었다.
+
+
+복잡하고 어려운 서버관리대신 손쉬운 서버관리를 선택하는건 ```당연```했다.
+
+### 서버 운영이 쉬워진다 ?
+1. 이미지만 다운받고 컨테이너만 생성하면 된다.
+2. 서버의 환경이 바뀌어도 의존성 문제 없이 이미지 다운 -> 컨테이너 생성 로직
+
+
+### Laradock 이란 ?
+라라독([Laradock](https://github.com/laradock/laradock/)) 은 도커 컨테이너에서 돌아가는 PHP 개발환경이다.
+
+### Laradock 사용
+
+```
+$ git clone https://github.com/Laradock/laradock.git
+$ cp env-sample .env
+```
+.environment(env) 파일에는 laradock 에서 제공하는 이미지들의 환경 값이 들어가있다.
+
+제공해주는 이미지들은 수없이 많으며 많은 이미지들중 아래 이미지를 선택했다.
+
+- nginx
+- mariadb
+- phpmyadmin
+- workspace
+
+```
+$ docker-compose up -d nginx mariadb phpmyadmin workspace
+$ docker ps
+```
+
+```http://localhost``` 에 접속을 하게되면 nginx 초기 화면이 보일것이다.
+
+nginx 설정파일을 수정해 기본 접속시 내 프로젝트가 보이게 설정해보자.
+
+```vi laradock/nginx/sites/default.conf```
+
+```
+root /var/www/public;
+```
+
+이 부분을 아래와 같이 자신의 디렉터리로 설정해준다.
+
+```
+root /var/www/myProject/public;
+```
+
+이제 라라벨 프로젝트의 .environment(env) 파일을 설정해줘야한다.
+
+```
+$ docker-compose exec workspace bash
+$ cd myProject
+$ cp .env.sample .env
+$ php artisan key:generate
+```
