@@ -106,7 +106,7 @@ $ php artisan key:generate
 이제는 mariadb 를 건들여보자. docker workspace 에 연결중이라면 `exit` 를 쳐서 밖으로 빠져나온다.
 
 
-따로 laradock .env 를 안건들인 상태에서는 mariadb(mysql) 의 초기 비밀번호는 root 이다.
+따로 laradock .env 를 건들지 않은 상태에서는 mariadb(mysql) 의 초기 비밀번호는 root 이다.
 
 ```
 $ docker-compose exec mariadb bash
