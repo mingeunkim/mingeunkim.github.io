@@ -65,7 +65,29 @@ root /var/www/public;
 root /var/www/myProject/public;
 ```
 
-이제 라라벨 프로젝트의 .environment(env) 파일을 설정해줘야한다.
+
+실행중인 도커 프로세스를 확인해보자. `nginx` `workspace` `php-fpm` `maria-db` 가 실행중이다.
+`php-fpm` 은 `docker-compose up` 을 안해도 자동으로 생성되는 컨테이너이다.
+
+```
+$ docker ps
+```
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/1.png">
+
+
+새로운 라라벨 프로젝트를 생성한다.
+
+```
+$ composer create-project --prefer-dist laravel/laravel docker-laravel -vvv
+```
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/2.png">
+
+
+workspace 에 접속하여 자신의 프로젝트 파일을 설정 해준다.
+
+글에서는 docker-laravel 이지만 `myProject` 에는 자신의 라라벨 프로젝트명이 와야함...
 
 ```
 $ docker-compose exec workspace bash
@@ -73,3 +95,37 @@ $ cd myProject
 $ cp .env.sample .env
 $ php artisan key:generate
 ```
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/3.png">
+
+
+`http://localhost` 에 접속해보자. 라라벨 화면이 뜬다.
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/4.png">
+
+이제는 mariadb 를 건들여보자. docker workspace 에 연결중이라면 `exit` 를 쳐서 밖으로 빠져나온다.
+
+
+따로 laradock .env 를 안건들인 상태에서는 mariadb(mysql) 의 초기 비밀번호는 root 이다.
+
+```
+$ docker-compose exec mariadb bash
+# mysql -uroot -p
+```
+
+잘 접속된다. 
+
+프로젝트에 쿼리를 연결 하려면 `myProject/.env` 를 수정하면된다.
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=myproject
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+비밀번호는 꼭 변경하도록 하자.
+
+감사합니다.
