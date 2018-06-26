@@ -13,7 +13,7 @@ permalink: /about/
 ### 정보
 - 이름 : 김민근
 - 이메일 : mingeun.k.k@gmail.com
-- 깃허브 : [https://github.com/mingeunkim](https://github.com/mingeunkim)
+- 깃허브 : [https://github.com/getsolaris](https://github.com/getsolaris)
 
 ### 경력
 - 더커머스 (2018.09 ~ 예정)
