@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Laravel 5.6 RESTful API JWT'
-description: 'Laravel JWT Example'
+title: 'Laravel 5.6 JWT API 개발'
+description: '라라벨로 JWT(Json Web Token) API 개발하기'
 date: 2018-08-07
 author: 김민근
 tags: [Laravel, JWT, Json Web Token]
