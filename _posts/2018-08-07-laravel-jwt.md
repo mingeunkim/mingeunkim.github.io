@@ -2,9 +2,9 @@
 layout: post
 title: 'Laravel 5.6 RESTful API JWT'
 description: 'Laravel JWT Example'
-date: 2018-08-06
+date: 2018-08-07
 author: 김민근
-tags: [Laravel, jwt, auth, jwt auth]
+tags: [Laravel, JWT, Json Web Token]
 ---
 
 > 라라벨 프레임워크를 이용한 jwt 인증
@@ -313,4 +313,4 @@ public function refresh() {
 
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/laravel-jwt/5.png">
 
-토큰 재발행 후 이전 토큰으로 발행시
+토큰 재발행 후 이전 토큰으로 발행시 존재하지 않는 토큰이라 에러
