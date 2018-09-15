@@ -59,4 +59,4 @@ POST CHAIN (포스트 체인)
 총 2시간 밖에 자지못했다. 저녁에는 팀원들과 야식을 두번이나 시켜먹었다. 글로 쓰지못할 정말 많은 추억들이 있었고
 <b>우수상</b>을 받아 너무 기쁘다..
 
-<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/sw-hackerthon-award/picture.jpg">
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/sw-hackerthon-award/picture.jpeg">
