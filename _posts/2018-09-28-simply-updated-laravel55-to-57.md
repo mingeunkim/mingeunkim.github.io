@@ -4,7 +4,7 @@ title: 'Updated from Laravel 5.5 to 5.7'
 description: 'Updated from Laravel 5.5 to 5.7'
 date: 2018-09-27
 author: Mingeun Kim
-tags: [Laravel]
+tags: [Laravel, Laravel 5.7]
 ---
 
 > Simply updated from Laravel 5.5 to 5.7
