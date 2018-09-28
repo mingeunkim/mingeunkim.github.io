@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 'Updated from Laravel 5.5 to 5.7'
-description: 'Updated from Laravel 5.5 to 5.7'
+title: 'Upgrade from Laravel 5.5 to 5.7'
+description: 'Upgrade from Laravel 5.5 to 5.7'
 date: 2018-09-27
 author: Mingeun Kim
 tags: [Laravel, Laravel 5.7]
 ---
 
-> Simply updated from Laravel 5.5 to 5.7
+> Simply upgrade from Laravel 5.5 to 5.7
 
 
 Hi Artisan.
@@ -60,6 +60,18 @@ protected $headers = [
 
 // Make this change. 5.7
 protected $headers = Request::HEADER_X_FORWARDED_ALL;
+```
+
+fourth: trustedproxy config change
+```php
+// config/trustedproxy.php
+
+return [
+    'proxies' => [
+        '192.168.1.10'
+    ],
+    'headers' => Illuminate\Http\Request::HEADER_X_FORWARDED_ALL,
+];
 ```
 
 its done. finally, `composer update -vvv`
