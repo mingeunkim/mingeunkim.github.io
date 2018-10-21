@@ -4,12 +4,12 @@ title: 'Laravel MVCS Design Pattern Service Create Command'
 description: 'Laravel MVCS Design Pattern Service Create Command'
 date: 2018-10-20
 author: 김민근
-tags: [Laravel, mvc, mvcs, service]
+tags: [Laravel, mvc, mvcs, service, command, artisan]
 ---
 
 # 라라벨 아티즌 명령어 개발 일기
 
-기존 라라벨은 `MVC (Model-View-Controller) 패턴`이였지만 회사 첫 출근 후, 서비스 로직은 `MVCS (Model-View-Controller-Service) 패턴`이였다.
+기존 라라벨은 `MVC (Model-View-Controller) 패턴`이였지만 회사 첫 출근 후, 서비스 로직은 `MVCS (Model-View-Controller-Service) 패턴`이었다.
 
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/1da80aee3f4055d3dda05ef16068b0dbf6bb75a5/assets/images/post/laravel-mvcs/mvc.jpg">
 
@@ -36,9 +36,11 @@ Model 에서 Controller 로 넘어갈땐 Model단에서 가공한 데이터를 �
 
 그 후 명령어를 개발하면 된다.
 
-본인은 서비스를 생성하는 명령어를 개발한뒤 다른 개발자들도 사용할 수 있도록 packagist 에 업로드 했다.
+----------
 
-`packagist` 란 ? PHP 패키지 업로드 사이트이다. 해당 사이트에 업로드를 하면 `composer` 명령어를 통해 쉽게 설치가 가능하다.
+본인은 서비스를 생성하는 명령어를 개발한뒤 다른 개발자들도 사용할 수 있도록 packagist 에 업로드 했습니다.
+
+`packagist` 란 ? PHP 패키지 업로드 사이트입니다. 해당 사이트에 업로드를 하면 `composer` 명령어를 통해 쉽게 설치가 가능합니다.
 
 
 ## download
