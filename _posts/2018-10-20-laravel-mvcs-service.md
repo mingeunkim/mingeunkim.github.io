@@ -30,11 +30,7 @@ Model 에서 Controller 로 넘어갈땐 Model단에서 가공한 데이터를 �
 
 모든 프로젝트에서 일일이 서비스(Service)를 손으로 만들어주다 보면 너무 손이 많이갔다. 그래서 `php artisan make:service {name}` 명령어가 있으면 편할것 이라고 생각하고 이와 같은 명령어를 만들어보기로 생각했다.
 
-라라벨에서 명령어를 생성하는 아티즌 명령어는 `php artisan make:command {name}` 이다. 사용자도 쉽게 아티즌 명령어를 개발할 수 있도록 라라벨에서 지원해준다.
-
-명령어 실행 후 파일은 `app/Console/Commands/` 에 생성된다.
-
-그 후 명령어를 개발하면 된다.
+라라벨에서 명령어(command)를 생성하는 아티즌 명령어는 `php artisan make:command {name}` 이다. 사용자도 쉽게 아티즌 명령어를 생성할 수 있도록 라라벨에서 지원해준다.
 
 ----------
 
@@ -42,6 +38,7 @@ Model 에서 Controller 로 넘어갈땐 Model단에서 가공한 데이터를 �
 
 `packagist` 란 ? PHP 패키지 업로드 사이트입니다. 해당 사이트에 업로드를 하면 `composer` 명령어를 통해 쉽게 설치가 가능합니다.
 
+Thanks You! 감사합니다.
 
 ## download
 - [https://github.com/getsolaris/laravel-make-service-command](https://github.com/getsolaris/laravel-make-service-command)
