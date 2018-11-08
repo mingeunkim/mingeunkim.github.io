@@ -5,23 +5,36 @@ permalink: /about/
 
 인공지능 커머스 스타트업에 재직중인 라라벨을 좋아하는 학생입니다.
 
+서버 개발과 프론트 개발도 하고, 서버 아키텍처에 관심이 많습니다.
 
-### 정보
-- 이름 : 김민근
-- 이메일 : mingeun.k.k@gmail.com or kevin@thecommerce.co.kr
+### Information
+- 이름 : 김민근 (Mingeun Kim)
+- 이메일 : mingeun.k.k@gmail.com
 - 깃허브 : [https://github.com/getsolaris](https://github.com/getsolaris)
 
-### 회사
+### Career
 - 더커머스 (THE COMMERCE)
+    - kevin@thecommerce.co.kr
+    - 2018.09 ~ ing
+    - 서울특별시 강남구 역삼1동 747-2 팁스타운 S1 (해성빌딩)
 
-### 기술
+### Skill
 - PHP
 - MySQL
 - Laravel
 - React
-- Docker
+- React Native
+- VueJS
+- Git
 
-### 프로젝트
+### Infra
+- Docker
+- AWS EC2
+- AWS S3
+- AWS Lambda Function (Python)
+- ...serverless
+
+### Projects
 
 1. 포스트체인
     - 기술 : Laravel, MySQL, loopchain
