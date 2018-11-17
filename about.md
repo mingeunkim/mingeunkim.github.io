@@ -22,17 +22,16 @@ permalink: /about/
 - PHP
 - MySQL
 - Laravel
-- React
-- React Native
-- VueJS
+- React (Learning)
+- AngularJS (Learning)
 - Git
 
 ### Infra
 - Docker
 - AWS EC2
 - AWS S3
-- AWS Lambda Function (Python)
-- ...serverless
+- AWS Lambda Function (Learning)
+- ...serverless framework (Learning)
 
 ### Projects
 
