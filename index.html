@@ -4,10 +4,9 @@ layout: default
 
 <header class="header">
   <div class="header-title">
-    <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
+    <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
   </div>
   <nav class="header-nav">
-    <p>>> 고3의 평범한 개발일기 블로그</p>
     {% for nav in site.nav %}
     {% if nav.url contains 'http://' or nav.url contains 'https://' %}
     <a href="{{ nav.url }}">{{ nav.name }}</a>
