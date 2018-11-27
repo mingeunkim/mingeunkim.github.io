@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Docker & Laravel (Laradock) 사용해보다..'
-description: '도커를 이용해 하이스쿨 스토어를 서비스 해보기 시작편'
+title: 'Docker & Laravel (Laradock) Part 1'
+description: 'Docker & Laravel (Laradock) Part 1'
 date: 2018-05-19
 author: 김민근
 tags: [Docker, Laravel, Laradock, nginx, mariadb]
