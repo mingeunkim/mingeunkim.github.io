@@ -28,9 +28,7 @@ permalink: /about/
 
 ### Infra
 - Docker
-- AWS EC2
-- AWS S3
-- AWS Lambda Function (Learning)
+- AWS Services (EC2, S3, Lambda)
 - ...serverless framework (Learning)
 
 ### Contribute
@@ -44,6 +42,12 @@ permalink: /about/
     - 기술 : Laravel
     - 깃허브 : [https://github.com/getsolaris/laravel-make-service-command](https://github.com/getsolaris/laravel-make-service-command)
     - 설명 : 회사에 재직하면서 MVCS 패턴을 다루게 되었고 라라벨에는 `Service` 클래스를 만들어주는 명령어가 없어 개발하게 되었습니다.
+
+- 해시태그 자동 가격 측정 커머스
+    - 기술 : React, Laravel
+    - 깃허브 : [https://github.com/toyprojects/hashtag-client](https://github.com/toyprojects/hashtag-client)
+    - 내용 : 온라인 소셜커머스 토이프로젝트
+    - 설명 : 등록된 상품 자동 가격 측정으로 인해 값 싼 가격을 소비자에게 보여준다는 목적으로 개발을 시작 하게되었습니다. 자세한 내용은 위 깃허브에서 확인 가능합니다.
 
 - 포스트체인
     - 기술 : Laravel, MySQL, loopchain
