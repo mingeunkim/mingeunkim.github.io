@@ -50,17 +50,17 @@ permalink: /about/
     - 설명 : 등록된 상품 자동 가격 측정으로 인해 값 싼 가격을 소비자에게 보여준다는 목적으로 개발을 시작 하게되었습니다. 자세한 내용은 위 깃허브에서 확인 가능합니다.
 
 - 포스트체인
-    - 기술 : Laravel, MySQL, loopchain
+    - 기술 : Laravel, loopchain
     - 내용 : 제5회 대한민국 SW융합 해커톤 대회에 지정과제2(우정서비스 혁신을 위한 블록체인 기반 융합서비스 개발)로 출전하여 `우수상`을 받음.
     - 설명 : 메인 개발자로 참여하여 서버 개발을 맡았습니다. 지정과제2(우정서비스 물류,금융 혁신을 위한 블록체인 기반 융합서비스 개발) 부분에 출전 하였습니다.
 
 - 하이스쿨 스토어
-    - 기술 : Laravel, MySQL, Redis, PageSpeed, travisCI, PWA
+    - 기술 : Laravel, Redis, PageSpeed, travisCI, PWA
     - 홈페이지 : [https://hischools.kr](https://hischools.kr)
     - 설명 : '하이스쿨 스토어 프로젝트'는 쉬는시간 또는 점심시간의 학교 매점과 학생들간의 인원 집중 최소화와 매점 담당자분들의 편의를 최대화하기 위하여 '하이스쿨 스토어' 사이트를 이용하여 상품을 예약하고, 시간에 맞춰 준비된 상품을 결제 및 수령하는 시스템으로써 학교측과 협약을 맺어 진행하는 서비스입니다.
 
 - 니드링크 디자인
-    - 기술 : Laravel, MySQL, Redis
+    - 기술 : Laravel, Redis
     - 홈페이지 : [https://needlink.kr](https://needlink.kr)
     - 대회 입상 : [http://www.2018svc.com/award/award_01.php](http://www.2018svc.com/award/award_01.php)
     - 설명 : `소셜 벤처대회` 청소년부분 대상 팀에 개발자로 합류. NEEDLINK DESIGN은 디자인이 필요하지만, 동네 인쇄소에 의지하고 있는 지역의 소상공인과 디자인 역량을 가지고 있지만 경험이 적은 특성화고 학생을 연계시키는 플랫폼입니다. 이를 통해 소상공인에게는 기업의 니즈에 맞는 디자인을, 학생에게는 진로 탐색과 실전 경험의 기회를 제공합니다.
