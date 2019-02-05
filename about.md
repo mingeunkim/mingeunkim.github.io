@@ -9,7 +9,7 @@ permalink: /about/
 
 ### Information
 - 이름 : 김민근 (Mingeun Kim)
-- 이메일 : mingeun.k.k@gmail.com
+- 이메일 : kevin@mingeun.com or mingeun.k.k@gmail.com
 - 깃허브 : [https://github.com/getsolaris](https://github.com/getsolaris)
 
 ### Career
