@@ -236,8 +236,6 @@ $a = $b ?: $c;
 ```
 
 
-#### 클로저 익명함수
-
 <br>
 <br>
 
@@ -247,4 +245,61 @@ $a = $b ?: $c;
 
 개발을 하면서 많은 코드리뷰를 통해 제 코드가 많이 다듬어졌습니다.
 <br>
-코드리뷰에 대해서는 [여기](http://blog.logi-spot.com/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%EC%9D%98-%EC%A7%84%EC%A7%9C-%EB%AA%A9%EC%A0%81%EC%9D%80-%EB%94%B0%EB%A1%9C%EC%9E%88%EB%8B%A4/)를 참고해주세요.
+코드리뷰에 대해서는 [여기](http://blog.logi-spot.com/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%EC%9D%98-%EC%A7%84%EC%A7%9C-%EB%AA%A9%EC%A0%81%EC%9D%80-%EB%94%B0%EB%A1%9C%EC%9E%88%EB%8B%A4/)를 확인해주세요.
+
+
+## 정리
+
+#### 릴리즈 뉴스 명령어
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/command-lists.png">
+
+릴리즈 관련된 커맨드입니다. 첫번째는 크롤링이고, 두번째는 슬랙 알림 발송입니다.
+라라벨 스케쥴러(crontab)가 돌면서 자동으로 수행합니다. 
+
+```php
+class Kernel extends ConsoleKernel
+{
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command(CrawlReleaseNews::class)->hourly();
+        $schedule->command(PushTodayReleaseNews::class)->dailyAt('7:05');
+    }
+}
+```
+
+#### 릴리즈 뉴스 크롤링
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/command-crawl.png">
+
+```bash
+$ php artisan release-news:crawl
+```
+
+하나의 릴리즈 타입당 5번을 돌며 크롤링 후 데이터베이스에 저장하게 됩니다.
+
+
+#### 릴리즈 뉴스 슬랙 알림
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/slack-noti.png">
+
+```bash
+$ php artisan release-news:push
+```
+
+릴리즈 날짜 기준으로 어제의 데이터를 슬랙에 알림을 제공합니다.
+
+
+#### 홈페이지
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/website.png">
+
+릴리즈 정보들은 탭별로 확인이 가능합니다.
+<br>
+우측 위젯에 Recently Releases 부분은 각 타입(PHP, Laravel ..) 별로 최근 릴리즈만 표시 됩니다.
+
+
+소스 확인은 [여기](https://github.com/getsolaris/modernpug.org)를 확인해주세요.
+
+<br><br><br><br>
+### 감사합니다.
