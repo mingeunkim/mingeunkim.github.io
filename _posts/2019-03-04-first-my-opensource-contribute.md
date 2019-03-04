@@ -7,8 +7,6 @@ author: 김민근
 tags: [Laravel, opensource, ModernPUG, PHP, Slack, Release]
 ---
 
-# 사회초년생 개발자가 오픈소스에 기여하기까지
-
 안녕하세요. <br>해당 포스팅 제목과 같이 저는 빠르게 사회에 뛰어들은 개발자 김민근입니다.
 
 
@@ -30,8 +28,10 @@ tags: [Laravel, opensource, ModernPUG, PHP, Slack, Release]
 <br>
 .
 <br>
-그렇게 해서 시작된 오픈소스 여정
+그렇게 시작된 오픈소스 여정
 
+<br>
+<br>
 
 ## 나에게 맞는 오픈소스를 찾다
 
@@ -51,11 +51,15 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일이 도착했습니다 !
 
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/nova-merge.png">
 
+<br>
+<br>
 
 ## 참여해도 될까요 ?
 
 번역에 기여한뒤 저는 `ModernPUG` (PHP 개발자 모임) 슬랙에 참가 하였고, 모임 운영자님에게 해당 홈페이지 개발에 기여를 하고 싶다고 여쭤봤는데, 흔쾌히 수락을 하셨습니다.
 
+<br>
+<br>
 
 ## 그렇게 시작하게된 개발
 
@@ -70,6 +74,8 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일이 도착했습니다 !
 
 > 개발 관련된 내용은 따로 포스팅 하도록 하겠습니다.
 
+<br>
+<br>
 
 ## 개발 하면서 
 
