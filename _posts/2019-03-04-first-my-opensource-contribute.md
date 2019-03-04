@@ -49,7 +49,7 @@ key 는 기본 영어로 저는 value 만 아래 사진처럼 번역을 진행 �
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/nova-source.png">
 
 두번째로 `Pull Request` 를 날렸습니다. 과연 날린 PR이 닫힐까, 합쳐질까 기대하고 있는 사이
-PR 날린 후 이틀 뒤 합쳐졌다고 이메일(:email:)이 도착했습니다 !
+PR 날린 후 이틀 뒤 합쳐졌다고 이메일이 도착했습니다 !
 
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/nova-merge.png">
 
@@ -61,7 +61,7 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일(:email:)이 도착했습니�
 
 ## 참여해도 될까요 ?
 
-번역에 기여한뒤 저는 [`ModernPUG`](https://modernpug.org/) (PHP 개발자 모임) 슬랙에 참가 하였고, 모임 운영자님에게 해당 홈페이지 개발에 기여를 하고 싶다고 여쭤봤는데, 흔쾌히 수락을 하셨습니다.
+번역에 기여한뒤 저는 [`ModernPUG`](https://modernpug.org/) (PHP 개발자 모임) 슬랙에 참가 하였고, 모임 운영자님에게 해당 홈페이지 개발에 참여를 하고 싶다고 여쭤봤는데, 흔쾌히 수락을 하셨습니다.
 
 <br>
 <br>
@@ -70,7 +70,7 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일(:email:)이 도착했습니�
 
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/modernpug-projects-panel.png">
 
-운영자님께서 제게 하고 싶은것을 골라보라고 말씀을 해주셔서, 저는 홈페이지 개발에 할일 중 `PHP 관련 릴리즈 소식 업데이트` 를 찝었습니다.
+운영자님께서 제게 개발 해보고 싶은것을 `Todo` 리스트 중에 골라보라고 말씀을 해주셔서, 저는 `PHP 관련 릴리즈 소식 업데이트` 를 선택 했습니다.
 <br>
 구현 해야할 기능들은 3가지가 있습니다. 언어는 당연히 PHP! Laravel 사용합니다.
 1. PHP 관련 릴리즈 크롤링
@@ -99,7 +99,7 @@ class ReleaseNews extends Model
 }
 ```
 
-#### 크롤링
+#### 크롤링 정보들
 
 7개 좀 넘는 정보를 제공 해주는데 모든 크롤링에 대해서는 셀렉터를 각각 지정을 해줘야 했습니다. 
 <br>
@@ -139,7 +139,7 @@ class ReleaseNews extends Model
 }
 ```
 
-#### 주석 (comment)
+#### 공동 프로젝트에서 주석(comment) 은 필수
 
 저는 원래 개인 프로젝트 할때는 주석을 아예 작성하지 않는 편입니다.
 
