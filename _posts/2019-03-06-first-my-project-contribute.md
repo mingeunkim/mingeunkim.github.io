@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '사회초년생 개발자가 오픈소스에 기여하기까지'
-description: '00년생 개발자가 오픈소스에 기여하기 까지'
+title: '사회초년생 개발자가 오픈소스 개발에 기여하기까지'
+description: '00년생 개발자가 오픈소스 개발에 기여하기 까지'
 date: 2019-03-04
 author: 김민근
 tags: [Laravel, opensource, ModernPUG, PHP, Slack, Release]
@@ -80,7 +80,7 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일이 도착했습니다 !
 <br>
 <br>
 
-## 개발 개발 개발
+## 개발에 대한 정리
 
 #### 모델은 생각보다 무겁게
 
@@ -209,7 +209,7 @@ IDE 자체에서 코딩 스타일을 설정 할 수 있었고, 개발을 하다�
 PSR 에 대해서는 [여기](https://psr.kkame.net/accepted/psr-2-coding-style-guide)를 참고해주세요.
 
 
-#### 조건을 줄이자
+#### 될 수 있으면 짧고 읽기 쉬운 문법을 사용합니다
 
 기본으로 조건문을 사용하면 아래와 같은 방법으로 사용할 것 입니다.
 
@@ -226,7 +226,7 @@ $fail = true;
 $fail && $this->print('실패 건수: ' . $fail);
 ```
 
-아래와 1번 코드를 2번 같이 가능합니다.
+아래 코드처럼 1번 코드를 2번 같이 줄이면 코드 재사용량이 줄어듭니다.
 ```php
 // 1
 $a = $b ? $b : $c;
@@ -247,6 +247,92 @@ $a = $b ?: $c;
 <br>
 코드리뷰에 대해서는 [여기](http://blog.logi-spot.com/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%EC%9D%98-%EC%A7%84%EC%A7%9C-%EB%AA%A9%EC%A0%81%EC%9D%80-%EB%94%B0%EB%A1%9C%EC%9E%88%EB%8B%A4/)를 확인해주세요.
 
+<br>
+<br>
+
+## 코드리뷰를 하면서
+
+코드리뷰를 하면서 코드와 네이밍에 많은 변화가 생겼습니다.
+<br>
+이 글을 포스팅 하면서 공유 했으면 좋겠어서 조심스럽게 올려봅니다.
+<br>
+
+#### 배열을 여러행에 걸쳐 사용할 경우 마지막 인자에 콤마를 넣습니다.
+
+```php
+class Kernel extends ConsoleKernel
+{
+    // 코드리뷰 전
+    protected $commands = [
+        CrawlFeed::class,
+        CrawlRelease::class,
+        PostImageUpdater::class
+    ];
+
+    // 코드리뷰 후
+    protected $commands = [
+        CrawlFeed::class,
+        CrawlRelease::class,
+        PostImageUpdater::class,
+    ];
+}
+```
+
+
+#### 한줄에 80자를 넘지 않습니다.
+
+```php
+// 코드리뷰 전
+$siteUrl = $this->releaseInContent($data['post']['url'], $data['post']['before'], $data['post']['after'], $version);
+
+// 코드리뷰 후
+$siteUrl = $this->releaseInContent($data['post']['url'],
+    $data['post']['before'],
+    $data['post']['after'],
+    $release[0],
+    $data['post']['end']);
+```
+
+
+#### 날짜 Mutators
+
+모델의 `$dates` 속성을 설정하면 Carbon 클래스의 인스턴스로 변경되어 사용할 수 있습니다.
+<br>
+사용 안한것과 `$dates` 속성의 값을 가져온것끼리 비교를 해보겠습니다.
+<br>
+저는 `$afterVar` 처럼 사용 했고 이번 리뷰를 통해 모델의 `$dates` 속성을 알게 되었습니다.
+
+```php
+$afterVar = strtotime($release->released_at);
+
+
+class ReleaseNews extends Model
+{
+    protected $dates = ['released_at'];
+}
+
+$beforeVar = $release->released_at->getTimestamp();
+```
+
+위 `$beforeVar` 변수를 보면 해당 값은 Carbon 인스턴스로 캐스팅 되기 때문에 Carbon 메소드를 사용할 수 있습니다.
+
+
+#### 메소드명 짓기
+
+원래 동사를 뒤에 쓰는 편이였는데 이번 리뷰를 통해 변수와 메소드 네이밍에 대해 곰곰히 생각해보는 계기가 되었습니다.
+
+```php
+// 코드리뷰 전
+private function releaseVersionCheck(string $version) {}
+private function releaseDateModify(string $date) {}
+
+// 코드리뷰 후
+private function checkReleaseVersion(string $version) {}
+private function convertReleaseDate(string $date) {}
+```
+
+<br>
+<br>
 
 ## 정리
 
@@ -277,6 +363,9 @@ $ php artisan release-news:crawl
 ```
 
 하나의 릴리즈 타입당 5번을 돌며 크롤링 후 데이터베이스에 저장하게 됩니다.
+<br>
+릴리즈 정보 크롤링 과정에서 깃허브 릴리즈 페이지를 크롤링 해오는데, 매번 셀렉터가 변경되어
+깃허브 API 를 사용했습니다.
 
 
 #### 릴리즈 뉴스 슬랙 알림
