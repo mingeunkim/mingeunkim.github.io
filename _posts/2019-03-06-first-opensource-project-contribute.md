@@ -54,7 +54,8 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일이 도착했습니다 !
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/nova-merge.png">
 
 <br>
-이때 Merge 가 되었다는걸 듣고 기분이 좋았습니다 
+해당 기여가 제 생에 첫 기여였고, 다른 사람들이 제가 번역한 `Laravel Nova Localizations Korean` 을 사용 한다고 생각만 해도
+정말 뿌듯합니다.
 
 <br>
 <br>
@@ -86,6 +87,12 @@ PR 날린 후 이틀 뒤 합쳐졌다고 이메일이 도착했습니다 !
 
 저는 모델은 좀 가볍게 서비스에 모든 데이터 관련 로직을 넣는 편이였는데, 해당 프로젝트에서는
 모델에 데이터 관련 로직을 포함 시켰습니다.
+<br>
+해당 프로젝트에서의 컨셉은 아래 4가지와 같습니다.
+- 가장 기본이 되는 객체로써의 존재
+- 도메인 객체간의 관계를 정리한다
+- 해당 객체가 가져야 하는 역할 및 속성을 같이 정리한다
+- 모델은 생각보다 무거운 존재가 된다
 
 ```php
 class ReleaseNews extends Model
@@ -215,14 +222,20 @@ PSR 에 대해서는 [여기](https://psr.kkame.net/accepted/psr-2-coding-style-
 
 ```php
 $fail = true;
+$this->print('성공 건수: ' . $success);
+$this->print('중복 건수: ' . $duplicate);
 if ($fail) {
     $this->print('실패 건수: ' . $fail);
 }
 ```
 
 하지만 아래와 같이 더 줄일 수 있습니다.
+<br>
+릴리즈 정보 크롤링 과정에서 카운트를 아래와 같이 사용했습니다. [이곳](https://github.com/ModernPUG/modernpug.org/blob/v2/app/Services/ReleaseNews/Updater.php)을 참고 해주세요.
 ```php
 $fail = true;
+$this->print('성공 건수: ' . $success);
+$this->print('중복 건수: ' . $duplicate);
 $fail && $this->print('실패 건수: ' . $fail);
 ```
 
@@ -391,4 +404,42 @@ $ php artisan release-news:push
 소스 확인은 [여기](https://github.com/getsolaris/modernpug.org)를 확인해주세요.
 
 <br><br><br><br>
-### 감사합니다.
+
+제게 다른 사람들이 코드를 평가 해주는 시간은 없었습니다.
+<br>
+`ModernPUG` 프로젝트를 하며 많은 코드리뷰를 받았습니다.
+<br>
+`'사회초년생 개발자가 오픈소스 개발에 기여하기까지'` 라는 글을 작성 하면서 다시 한번 코드리뷰의 `중요성`을 크게 뉘우쳤습니다.
+코드리뷰의 좋은점은 사람마다 코드 스타일이 다르며 다른사람의 코드 작성법을 알 수 있는 길인것 같습니다.
+<br>
+코드리뷰를 받으며 '아 이런식으로도 가능하구나', '이런식으로 하면 더 가독성이 좋겠구나' 라는 생각을 여러번 하게 되었습니다.
+<br>
+또한 오픈소스가 가져오는 결과물은 다른 사람의 잘 짜여진 코드를 보고 개발 하면서 지식을 얻는것 같습니다.
+<br>
+<br>
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/Screen%20Shot%202019-03-08%20at%2012.02.35%20AM.png">
+<br>
+이 포스팅을 19.03.07 일자에 업로드를 마쳤는데, 하루에 600분이 제 블로그에 방문 그리고 해당 포스트를 봐주셨습니다.
+<br>
+<br>
+<br>
+또한 페이스북을 통해 많은 분들이 `'사회초년생 개발자가 오픈소스 개발에 기여하기까지'` 포스트를 공유 해주셨습니다.
+<br>
+
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/share1.png">
+
+> OSSF 개발자 그룹
+
+<br>
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/share2.png">
+
+> 국민대학교 이민석 교수님
+
+<br>
+<img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/first-my-opensource-contribute/share3.png">
+
+> 비트바이트 안서형 대표님
+
+외에도 많은 분들이 많은 관심을 가져주셨습니다.
+<br>
+`'사회초년생 개발자가 오픈소스 개발에 기여하기까지'` 포스트에 관심을 가져주셔서 감사합니다. 
