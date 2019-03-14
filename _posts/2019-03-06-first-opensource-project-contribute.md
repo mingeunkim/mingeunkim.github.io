@@ -2,6 +2,7 @@
 layout: post
 title: '사회초년생 개발자가 오픈소스 개발에 기여하기까지'
 description: '00년생 개발자가 오픈소스 개발에 기여하기 까지'
+comments: true
 date: 2019-03-06
 author: 김민근
 tags: [Laravel, opensource, ModernPUG, PHP, Slack, Release]
