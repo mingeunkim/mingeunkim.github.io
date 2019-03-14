@@ -11,7 +11,7 @@ author:
   email:            mingeun.k.k@gmail.com
 
 copyright:
-  year:             2018
+  year:             2019
   name:             Mingeun Kim
 
 # Google-analytics
@@ -20,7 +20,7 @@ google-analytics:
 
 # Disqus
 disqus:
-  id:               ""
+  id:               "mingeuncom"
 
 # URL
 url:                "https://getsolaris.github.io" # the base hostname & protocol for your site
