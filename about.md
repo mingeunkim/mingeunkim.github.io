@@ -19,9 +19,7 @@ permalink: /about/
     - Address: 서울특별시 강남구 역삼1동 747-2 팁스타운 S1 (해성빌딩)
 
 ### Skill
-- PHP
-- MySQL
-- Laravel (Primary)
+- PHP framework Laravel (Primary)
 - React (Learning)
 - <del>AngularJS (Learning)</del>
 - Git
@@ -36,8 +34,12 @@ permalink: /about/
     - laravel 5.7 edit logging section missing table 
     - laravel 5.8 eloquent section translate
 
-1. [Laravel Nova Localization](https://github.com/franzdumfart/laravel-nova-localizations)
+2. [Laravel Nova Localization](https://github.com/franzdumfart/laravel-nova-localizations)
     - Language translate into Korean
+    
+3. [Elastic Search](https://www.elastic.co/guide/kr/elasticsearch/reference/current/getting-started.html)
+    - Korean Getting Started Page Markdown Syntax Error 
+
 
 ### Projects
 
@@ -49,7 +51,7 @@ permalink: /about/
 - 팀 크레센도 중앙 API 서버 개발
     - 기술: Laravel
     - 깃허브: [https://github.com/team-crescendo/laravel-central-api](https://github.com/team-crescendo/laravel-central-api)
-    - 설명: 팀 크레센도의 중앙 API 서버를 담당하여 디스코드 봇과 엑솔라와 통신을 하기 위해 개발 했습니다. 저희팀 개발자들이 편하게 API 서버와 통신을 할 수 있도록 `Swagger` 를 이용하여 `API 문서화 작업`을 했습니다.
+    - 설명: 중앙 API 서버(이하 `API 서버`)는 팀 크레센도 홈페이지(이하 `홈페이지`), 결제 대행사(`엑솔라`), 디스코드 봇(이하 `봇`) 사이에서 통용되는 데이터를 통합해서 관리하는 API 서버입니다.
 
 - 라라벨 MVCS 디자인패턴 사용자들을 위한 Service 클래스 생성 명령어 개발
     - 기술: Laravel
