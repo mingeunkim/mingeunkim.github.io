@@ -29,6 +29,16 @@ permalink: /about/
 - AWS Services (EC2, S3, Lambda)
 - ...serverless framework (Learning)
 
+### Award
+- (2018.09) 제5회 대한민국 SW 융합 해커톤 블록체인 부문 우수상
+    - 수상기관: 대전광역시장상
+    - 설명: 과학기술정보통신부(대한민국 정부)에서 주최한 2박 3일 해커톤(대회)입니다.<br>
+지정과제2(우정서비스 물류,금융 혁신을 위한 블록체인 기반 융합서비스 개발) 부문에 개발 리더를 맡아 출전 하였습니다. <br>서버 아키텍처와 FE / BE 를 맡아 개발 했습니다.
+
+- (2019.04) 제 18회 앱잼(APPJAM) 생활 부문 우수상
+    - 수상기관: 중소벤처기업부, SK텔레콤, SK플래닛
+    - 설명: 중소벤처기업부, SK텔레콤, SK플래닛이 공동으로 주최하는 고등학생 앱 및 융합 서비스 개발 경진대회 Smarteen App Challenge의 커뮤니티 행사로 무박 2일 동안 분야 별로 정해진 주제에 맞춰 결과물을 개발하는 행사입니다. <br>본 대회에 개발 리더를 맡아 출전 하였고 서버 아키텍처와 BE 를 맡아 개발 했습니다.
+
 ### Contribute
 1. [Laravel Korea Document](https://laravel.kr/docs)
     - laravel 5.7 edit logging section missing table 
