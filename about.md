@@ -19,6 +19,7 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
     - Address: 서울특별시 강남구 역삼1동 747-2 팁스타운 S1 (해성빌딩)
     
 - 서울대학교병원 의생명연구원 (2019.08 ~ )
+    - Skill: Nginx, PHP, MySQL, AWS Architecture
     - Address: 서울특별시 종로구 이화동 대학로 101
 
 ### Skill
