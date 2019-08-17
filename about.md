@@ -23,15 +23,9 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
     - Address: 서울특별시 종로구 이화동 대학로 101
 
 ### Skill
-- PHP framework Laravel (Primary)
-- React (Learning)
-- <del>AngularJS (Learning)</del>
+- PHP
+- Laravel (PHP Framework)
 - Git
-
-### Infra (Learning)
-- Docker
-- AWS Services (EC2, S3, Lambda)
-- ...serverless framework (Learning)
 
 ### Award
 - (2018.09) 제5회 대한민국 SW 융합 해커톤 블록체인 부문 우수상
