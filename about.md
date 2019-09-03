@@ -40,7 +40,7 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
         - 배송처리 현황 API 데이터 로딩을 54000ms 에서 4000ms 로 개선 했습니다. [BE]
     </details>
     
-- 서울대학교병원 의생명연구원 (2019.08 ~ )
+- 서울대학교병원 (2019.08 ~ )
     - Skill: Nginx, PHP, MySQL, AWS Architecture
     - Address: 서울특별시 종로구 이화동 대학로 101
 
