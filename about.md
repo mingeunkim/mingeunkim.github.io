@@ -16,17 +16,17 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
 ---
 
 ### Career
-- 더커머스 Backend Engineer (6month 2018.10 ~ 2019.04) 
+- 더커머스 **Backend Engineer** (6month 2018.10 ~ 2019.04) 
     - Skill: Laravel, MySQL, AngularJS, React, AWS Architecture
     - Address: 서울특별시 강남구 역삼1동 747-2 팁스타운 S1 (해성빌딩)
 
-- 서울대학교병원 Research Scientist (2019.08 ~ ) 
+- 서울대학교병원 **Research Scientist** (2019.08 ~ ) 
     - Skill: Nginx, PHP, MySQL, AWS Architecture
     - Address: 서울특별시 종로구 이화동 대학로 101
     - Works
         - 서울대학교병원 수술 빅데이터 VitalDB ([vitaldb.net](vitaldb.net))
         - 한국장기이식 데이터베이스 Korean Transplantation DB ([tpldb.org](tpldb.org))
-        - 국가임상시험지원재단 KOREA CLINICAL DATATHON 2019 (datathon.konect.or.kr) 서울대학교병원 멘토
+        - 국가임상시험지원재단 KOREA CLINICAL DATATHON 2019 ([datathon.konect.or.kr](datathon.konect.or.kr)) 서울대학교병원 멘토로 참여
 
 ---
 
@@ -47,24 +47,14 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
     - 수상기관: 중소벤처기업부, SK텔레콤, SK플래닛
     - 설명: 중소벤처기업부, SK텔레콤, SK플래닛이 공동으로 주최하는 고등학생 앱 및 융합 서비스 개발 경진대회 Smarteen App Challenge의 커뮤니티 행사로 무박 2일 동안 분야 별로 정해진 주제에 맞춰 결과물을 개발하는 행사입니다. <br>본 대회에 개발 리더를 맡아 출전 하였고 서버 아키텍처와 BE 를 맡아 개발 했습니다.
 
-### Contribute
-1. [Laravel Korea Document](https://laravel.kr/docs)
-    - laravel 5.7 edit logging section missing table 
-    - laravel 5.8 eloquent section translate
-
-2. [Laravel Nova Localization](https://github.com/franzdumfart/laravel-nova-localizations)
-    - Language translate into Korean
-    
-3. [Elastic](https://github.com/elastic) `Search` / `Kibana` / `Logstash`
-    - Korean Getting Started Page Markdown Syntax Error 
-
+---
 
 ### Projects
 
 - Modern PHP User Group
     - 기술: Laravel
     - 깃허브: [https://github.com/getsolaris/modernpug.org](https://github.com/getsolaris/modernpug.org)
-    1. PHP 관련 릴리즈 정보를 크롤링해 ModernPUG 슬랙과 홈페이지에 제공
+    - 설명: PHP 관련 릴리즈 정보를 크롤링해 ModernPUG 슬랙과 홈페이지에 제공
 
 - 팀 크레센도 중앙 API 서버 개발
     - 기술: Laravel
