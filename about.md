@@ -13,41 +13,29 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
 - 이메일 : mingeun.k.k@gmail.com (Primary)
 - 깃허브 : [https://github.com/getsolaris](https://github.com/getsolaris)
 
+---
+
 ### Career
-- 더커머스 (6month 2018.10 ~ 2019.04)
+- 더커머스 Backend Engineer (6month 2018.10 ~ 2019.04) 
     - Skill: Laravel, MySQL, AngularJS, React, AWS Architecture
     - Address: 서울특별시 강남구 역삼1동 747-2 팁스타운 S1 (해성빌딩)
-    <details>
-    <summary>Works</summary>
-    <br>
-        -더커머스 기업 홈페이지를 신규 개발을 진행 했습니다.<br>
-        - React 를 사용하여 Single Application Page 개발을 했습니다. [FE]<br>
-        원프라이스 페이지 개선 및 신규 개발을 진행 했습니다.<br>
-        - 배너 PC / Mobile 구분을 개발 했습니다. [FE/BE]<br>
-        - 네이버페이 옵션 출력을 개발 했습니다. [FE]<br>
-        원프라이스 상품 관련 개선 및 신규 개발을 진행 했습니다.<br>
-        - 상품 옵션 (1 단계, 2 단계, 3 단계) 을 개발 했습니다. [FE/BE]<br>
-        - 상품 미리보기를 개발 했습니다. [FE/BE]<br>
-        - 상품 복사 기능을 개발 했습니다. [FE/BE]<br>
-        - 상품 일괄등록시 엑셀 썸네일 판별을 개발 했습니다. [FE/BE]<br>
-        - 상품 상세페이지 옵션 재고 여부 판별을 개발 했습니다. [FE/BE]<br>
-        - 상품 리스트 판매자(셀러) 등록 요청을 개발 했습니다. [FE/BE]<br>
-        - 조회 필터기능 구현 [BE]<br>
-        - 판매자 수수료를 개발 했습니다. [FE/BE]<br>
-        - 판매자 거래 종료 기능을 개발 했습니다. [FE/BE]<br>
-        원프라이스 배송처리 현황 개선 및 신규 개발을 진행 했습니다.<br>
-        - 여행상품 주문 프로세스를 개발 했습니다. [FE/BE]<br>
-        - 배송처리 현황 API 데이터 로딩을 54000ms 에서 4000ms 로 개선 했습니다. [BE]
-    </details>
-    
-- 서울대학교병원 (2019.08 ~ )
+
+- 서울대학교병원 Research Scientist (2019.08 ~ ) 
     - Skill: Nginx, PHP, MySQL, AWS Architecture
     - Address: 서울특별시 종로구 이화동 대학로 101
+    - Works
+        - 서울대학교병원 수술 빅데이터 VitalDB ([vitaldb.net](vitaldb.net))
+        - 한국장기이식 데이터베이스 Korean Transplantation DB ([tpldb.org](tpldb.org))
+        - 국가임상시험지원재단 KOREA CLINICAL DATATHON 2019 (datathon.konect.or.kr) 서울대학교병원 멘토
+
+---
 
 ### Skill
 - PHP
 - Laravel (PHP Framework)
 - Git
+
+---
 
 ### Award
 - (2018.09) 제5회 대한민국 SW 융합 해커톤 블록체인 부문 우수상
