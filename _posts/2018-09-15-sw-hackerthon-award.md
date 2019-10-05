@@ -56,7 +56,7 @@ POST CHAIN (포스트 체인)
 
 ## 일기
 이렇게 큰 정부에서 개최하는 해커톤 대회는 처음 출전해본다. 포스트 체인 서비스를 구현할때까지 42시간이라는 시간이 있었는데
-총 2시간 밖에 자지못했다. 저녁에는 팀원들과 야식을 두번이나 시켜먹었다. 글로 쓰지못할 정말 많은 추억들이 있었고
-<b>우수상</b>을 받아 너무 기쁘다..
+총 2시간 밖에 자지 못했습니다. 저녁에는 팀원들과 야식을 두번이나 시켜 먹었고, 글로 쓰지못할 정말 많은 추억들과
+<b>우수상</b>을 받아 너무 기쁩니다.
 
 <img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/sw-hackerthon-award/picture.jpeg">
