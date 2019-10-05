@@ -17,11 +17,11 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
 
 ### Career
 - 더커머스 **Backend Engineer** (6month 2018.10 ~ 2019.04) 
-    - Skill: Laravel, MySQL, AngularJS, React, EC2, S3, Lambda
+    - Skill: Laravel, MySQL, AngularJS, React, EC2, RDS, S3, Lambda
     - Address: 서울특별시 강남구 역삼1동 747-2 팁스타운 S1 (해성빌딩)
 
 - 서울대학교병원 **Research Scientist** (2019.08 ~ ) 
-    - Skill: PHP, MySQL, Nginx, Redis, EC2, S3, Lambda
+    - Skill: PHP, MySQL, Nginx, Redis, EC2, RDS, S3, Lambda
     - Address: 서울특별시 종로구 이화동 대학로 101
     - Works
         - 서울대학교병원 수술 빅데이터 VitalDB ([vitaldb.net](vitaldb.net))
