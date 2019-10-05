@@ -31,6 +31,7 @@ LAMP 스택과 Laravel 을 메인으로 다루고 있습니다.
 ---
 
 ### Skill
+- javascript
 - PHP
 - Laravel (PHP Framework)
 - Git
