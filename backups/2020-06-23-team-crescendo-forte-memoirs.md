@@ -3,7 +3,7 @@ layout: post
 title: '챗봇으로 일상을 바꾸는 팀에서 백엔드 개발자로 활동하며 개발은 어떻게 진행하는가'
 description: '100,000명 이상의 사용자를 보유하고 있는 디스코드 챗봇팀에서 1년 반동안 활동하며'
 comments: true
-date: 2020-06-23
+date: 2020-06-24
 author: 김민근
 tags: [Laravel, php, aws, architecture]
 ---
@@ -109,17 +109,21 @@ __온라인__ 팀으로 각자 개인의 시간에 따라 참여하다 보니 �
 
 ![7. 라벨 이미지 첨부](https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/team-crescendo-forte-memoirs/7.png)
 
-라벨을 사용하면 신규 개발인지, 핫픽스 수정, 또는 버전 관리를 할 때 `v1`, `v2` 라벨과 같이 어떤 버전에 관련된 이슈인지 한 눈에 알 수 있어요.
+라벨을 사용하면 신규 개발인지, 핫픽스 수정, 또는 버전 관리를 할 때 `v1`, `v2` 라벨과 같이 어떤 버전에 속한 이슈인지 한 눈에 알 수 있어요.
 
 ### 미니 Kanban, 프로젝트
 
-이슈랑 사용하면 짱짱 좋은 프로젝트, 우리는 유명한 칸반보드 대신 깃허브의 프로젝트를 사용해요.
+우리는 유명한 칸반보드 서비스 대신 깃허브의 프로젝트를 사용해요.
 
-사실 프로젝트를 도입한지는 별로 안되었어요.. (더 빨리 도입할껄 ㅠㅠ)
+깃허브 프로젝트를 도입한지는 별로 안되었어요.. (더 빨리 도입할껄 ㅠㅠ)
 
 ![8. 프로젝트 사진 첨부](https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/team-crescendo-forte-memoirs/8.png)
 
 위 사진처럼 이슈를 바로 확인 가능하고, 어느 프로세스에 머물러있는지 확인이 가능해요.
+
+또한 프로젝트에서 바로 Issue 를 불러올 수 있어요 !
+
+Issue 에 링킹된 Pull Reqeust 도 볼 수 있답니다 !
 
 ## 협업을 위한 몇가지의 규칙
 
@@ -177,23 +181,25 @@ PHP 프레임워크인 Laravel을 도입 하게되었어요.
 
 `포르테`의 인프라는 모두 AWS 제품으로 구성되어 있어요 !
 
-- AWS EC2 
-- AWS S3
-- AWS CodeDeploy
+- AWS EC2 (Cloud Computer, 포르테의 서버를 맡고 있어요)
+- AWS S3 (Forte와 Xsolla 이미지 처리 및 CodeDeploy Build 파일들)
+- AWS CodeDeploy (자동배포 서비스)
 - ~~AWS RDS~~
-- AWS CloudWatch
+- AWS CloudWatch (AWS 모니터링 서비스)
 
 ### 코드 테스트 그리고 자동 배포까지 (CI/CD)
 
 `포르테팀`에서는 테스트 코드를 직접 짜고 있지는 않아요. 하지만 이번에 팀 회의를 거쳐 `테스트 주도 개발(TDD)` 를 도입 하기로 했어요 !
 
-코드 테스트 이야기는 여기서 마무리 하고 (다음 포스트에서 찾아 뵐게요 !) 자동 배포에 대해 이야기를 드릴게요 !
+코드 테스트는 도입한지 별로 안되어서 이야기 드릴게 없어요!
+ 
+지금은 자동 배포에 대해 이야기를 드릴게요 !
 
 ![14. code deploy](https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/team-crescendo-forte-memoirs/14.png)
 
-코드 자동 배포 프로세스는 위 사진과 같이 구성했어요 !
+코드 자동 배포 프로세스는 위 사진과 같이 인프라를 구성했어요 !
 
-정리하자면 `포르테 개발팀`에서 master 브랜치에 Commit & Push 를 하게 되면 TravisCI 에서 Build 를 진행 하고 만약, Build 가 성공적으로 된다면 AWS S3 버킷에 소스코드가 업로드가 되어요.
+정리하면, `포르테 개발팀`에서 master 브랜치에 Commit & Push 를 하게 되면 TravisCI 에서 Build 를 진행 하고 만약, Build 가 성공적으로 된다면 AWS S3 버킷에 소스코드가 업로드가 되어요.
 
 ### 에러를 효과적으로 추적하기
 
@@ -237,4 +243,7 @@ Grafana는 시계열 매트릭 데이터를 시각화 하는데 가장 최적화
 
 
 ## 마무리
-100,000명 이상의 사용자를 보유하고 있는 디스코드 챗봇팀에서 1년 반동안 활동하며 ...
+
+팀 크레센도에 대해 궁금하신 점이 있다면 댓글 남겨주세요 ! 
+
+감사합니다.
