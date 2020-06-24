@@ -246,4 +246,7 @@ Grafana는 시계열 매트릭 데이터를 시각화 하는데 가장 최적화
 
 팀 크레센도에 대해 궁금하신 점이 있다면 댓글 남겨주세요 ! 
 
+- [팀 크레센도 홈페이지](https://team-crescendo.me)
+- [포르테 깃허브](https://github.com/team-crescendo/laravel-forte-api)
+
 감사합니다.
