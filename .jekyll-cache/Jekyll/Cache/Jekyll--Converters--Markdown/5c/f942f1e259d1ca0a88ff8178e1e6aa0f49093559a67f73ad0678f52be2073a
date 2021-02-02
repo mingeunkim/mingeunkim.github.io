@@ -1,0 +1,112 @@
+I"<blockquote>
+  <p>도커를 이용한 서버 관리</p>
+</blockquote>
+
+<p><img src="https://ih1.redbubble.net/image.386900865.0087/flat,800x800,075,f.jpg" width="500" /></p>
+
+<h3 id="도커-입문-계기">도커 입문 계기</h3>
+<p>기존 하이스쿨 스토어는 apache2 + php7.1 + mysql 편하게 말하면 apm 기술을 사용하고 있었다. 하지만 라라벨 이용자들의 말을 들어보면 아파치 보다는 엔진엑스가 성능이 더 좋고
+라라벨을 받쳐준다는 말을 듣고 서버를 갈아 엎기 시작했다. nginx … php7.2 … mariadb … 이 세가지를 설치하고 나면 어느 하나가 오류가 나기 시작했다.</p>
+
+<p>서버를 효율적으로 관리하기위해 구글링을 열심히 해보는중 <code class="highlighter-rouge">Docker</code> 라는 단어가 눈에 띄었다.</p>
+
+<p>복잡하고 어려운 서버관리대신 손쉬운 서버관리를 선택하는건 <code class="highlighter-rouge">당연</code>했다.</p>
+
+<h3 id="서버-운영이-쉬워진다-">서버 운영이 쉬워진다 ?</h3>
+<ol>
+  <li>이미지만 다운받고 컨테이너만 생성하면 된다.</li>
+  <li>서버의 환경이 바뀌어도 의존성 문제 없이 이미지 다운 -&gt; 컨테이너 생성 로직</li>
+</ol>
+
+<h3 id="laradock-이란-">Laradock 이란 ?</h3>
+<p>라라독(<a href="https://github.com/laradock/laradock/">Laradock</a>) 은 도커 컨테이너에서 돌아가는 PHP 개발환경이다.</p>
+
+<h3 id="laradock-사용">Laradock 사용</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/Laradock/laradock.git
+$ cp env-sample .env
+</code></pre></div></div>
+<p>.environment(env) 파일에는 laradock 에서 제공하는 이미지들의 환경 값이 들어가있다.</p>
+
+<p>제공해주는 이미지들은 수없이 많으며 많은 이미지들중 아래 이미지를 선택했다.</p>
+
+<ul>
+  <li>nginx</li>
+  <li>mariadb</li>
+  <li>phpmyadmin</li>
+  <li>workspace</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker-compose up -d nginx mariadb phpmyadmin workspace
+$ docker ps
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">http://localhost</code> 에 접속을 하게되면 nginx 초기 화면이 보일것이다.</p>
+
+<p>nginx 설정파일을 수정해 기본 접속시 내 프로젝트가 보이게 설정해보자.</p>
+
+<p><code class="highlighter-rouge">vi laradock/nginx/sites/default.conf</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /var/www/public;
+</code></pre></div></div>
+
+<p>이 부분을 아래와 같이 자신의 디렉터리로 설정해준다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root /var/www/myProject/public;
+</code></pre></div></div>
+
+<p>실행중인 도커 프로세스를 확인해보자. <code class="highlighter-rouge">nginx</code> <code class="highlighter-rouge">workspace</code> <code class="highlighter-rouge">php-fpm</code> <code class="highlighter-rouge">maria-db</code> 가 실행중이다.
+<code class="highlighter-rouge">php-fpm</code> 은 <code class="highlighter-rouge">docker-compose up</code> 을 안해도 자동으로 생성되는 컨테이너이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/1.png" /></p>
+
+<p>새로운 라라벨 프로젝트를 생성한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ composer create-project --prefer-dist laravel/laravel docker-laravel -vvv
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/2.png" /></p>
+
+<p>workspace 에 접속하여 자신의 프로젝트 파일을 설정 해준다.</p>
+
+<p>글에서는 docker-laravel 이지만 <code class="highlighter-rouge">myProject</code> 에는 자신의 라라벨 프로젝트명이 와야함…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker-compose exec workspace bash
+$ cd myProject
+$ cp .env.sample .env
+$ php artisan key:generate
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/3.png" /></p>
+
+<p><code class="highlighter-rouge">http://localhost</code> 에 접속해보자. 라라벨 화면이 뜬다.</p>
+
+<p><img src="https://raw.githubusercontent.com/getsolaris/getsolaris.github.io/master/assets/images/post/docker/4.png" /></p>
+
+<p>이제는 mariadb 를 건들여보자. docker workspace 에 연결중이라면 <code class="highlighter-rouge">exit</code> 를 쳐서 밖으로 빠져나온다.</p>
+
+<p>따로 laradock .env 를 건들지 않은 상태에서는 mariadb(mysql) 의 초기 비밀번호는 root 이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker-compose exec mariadb bash
+# mysql -uroot -p
+</code></pre></div></div>
+
+<p>잘 접속된다.</p>
+
+<p>프로젝트에 쿼리를 연결 하려면 <code class="highlighter-rouge">myProject/.env</code> 를 수정하면된다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=myproject
+DB_USERNAME=root
+DB_PASSWORD=root
+</code></pre></div></div>
+
+<p>비밀번호는 꼭 변경하도록 하자.</p>
+
+<p>감사합니다.</p>
+:ET
